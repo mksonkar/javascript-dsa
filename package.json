@@ -1,0 +1,29 @@
+{
+  "name": "javascript-dsa",
+  "version": "1.0.0",
+  "description": "My implementation of data structures and algorithms in javaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mksonkar/javascript-dsa.git"
+  },
+  "keywords": [
+    "dsa",
+    "data",
+    "structures",
+    "algorithms",
+    "interview",
+    "preparation",
+    "computer",
+    "science"
+  ],
+  "author": "Mukesh Kumar Sonkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mksonkar/javascript-dsa/issues"
+  },
+  "homepage": "https://github.com/mksonkar/javascript-dsa#readme"
+}
