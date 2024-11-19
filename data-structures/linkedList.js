@@ -37,6 +37,38 @@ class LinkedList {
     this.size++;
   }
 
+  insert(index, value) {
+    let newNode = new Node(value);
+    // Index out of range
+    if (index > this.size) {
+      return "Index out of range";
+    }
+    // Insert at head
+    if (index === 0) {
+      newNode.next = this.head.next;
+      this.head = newNode;
+      this.size++;
+      return;
+    }
+    // Insert at tail
+    if (index === this.size) {
+      newNode.next = null;
+      this.tail = newNode;
+    }
+    let counter = 0;
+    let currentNode = this.head;
+    while (currentNode.next !== null) {
+      if (counter === index - 1) {
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        this.size++;
+        return;
+      }
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+
   delete(value) {
     // empty list
     if (this.head === null) {
