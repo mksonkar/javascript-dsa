@@ -37,6 +37,33 @@ class LinkedList {
     this.size++;
   }
 
+  delete(value) {
+    // empty list
+    if (this.head === null) {
+      return "List is empty";
+    }
+    let currentNode = this.head;
+
+    // head is to be deleted
+    if (currentNode.value === value) {
+      this.head = null;
+      this.size--;
+      return "Node deleted";
+    }
+
+    while (currentNode.next !== null) {
+      if (currentNode.next.value === value) {
+        let deletedNode = currentNode.next;
+        currentNode.next = deletedNode.next;
+        deletedNode.next = null;
+        this.size--;
+        return "Node deleted";
+      }
+      currentNode = currentNode.next;
+    }
+    return "Value not present";
+  }
+
   print() {
     if (this.head === null) {
       console.log("Empty list");
